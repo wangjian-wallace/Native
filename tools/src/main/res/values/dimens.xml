@@ -1,0 +1,44 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="activity_tiny">10dp</dimen>
+    <dimen name="activity_small">12dp</dimen>
+    <dimen name="activity_little">14dp</dimen>
+    <dimen name="activity_centre">16dp</dimen>
+    <dimen name="activity_middle">18dp</dimen>
+    <dimen name="activity_big">20dp</dimen>
+    <dimen name="activity_large">22dp</dimen>
+    <dimen name="activity_great">24dp</dimen>
+    <dimen name="activity_huge">26dp</dimen>
+
+    <dimen name="tiny">10sp</dimen>
+    <dimen name="small">12sp</dimen>
+    <dimen name="little">14sp</dimen>
+    <dimen name="centre">16sp</dimen>
+    <dimen name="middle">18sp</dimen>
+    <dimen name="big">20sp</dimen>
+    <dimen name="large">22sp</dimen>
+    <dimen name="great">24sp</dimen>
+    <dimen name="huge">26sp</dimen>
+    <dimen name="huge_33">33sp</dimen>
+    <dimen name="activity_header_view">0dp</dimen>
+    <dimen name="activity_my_top">10dp</dimen>
+
+    <dimen name="crop__bar_height">56dp</dimen>
+    <dimen name="activity_my_top2">0dp</dimen>
+    <dimen name="My_avatar">90dp</dimen>
+    <dimen name="Integral_top">120dp</dimen>
+    <dimen name="Main_top_image">35dp</dimen>
+    <dimen name="fab_account">0dp</dimen>
+    <dimen name="Main_banner">86dp</dimen>
+
+    <dimen name="insurance_height">105dp</dimen>
+    <dimen name="insurance_height3">105dp</dimen>
+    <dimen name="To_loan_height">118dp</dimen>
+    <dimen name="Integral_margin">5dp</dimen>
+
+
+    <dimen name="main_top">10dp</dimen>
+</resources>

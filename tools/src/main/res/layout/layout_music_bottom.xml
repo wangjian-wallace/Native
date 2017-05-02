@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:id="@+id/lyMusic_bottom">
+
+    <ImageView
+        android:id="@+id/image_view_album"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"
+        />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            android:id="@+id/tvMusic_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:singleLine="true"
+            tools:text="Title"
+            />
+
+        <TextView
+            android:id="@+id/tvMusic_singer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#AB000000"
+            android:textSize="14sp"
+            android:singleLine="true"
+            tools:text="singer"
+            />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivMusic_toggle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_play_arrow_black_24dp"
+        android:layout_gravity="center"
+        />
+    <ImageView
+        android:id="@+id/ivMusic_next"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_skip_next_black_24dp"
+        android:layout_gravity="center"
+        />
+</LinearLayout>

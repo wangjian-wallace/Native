@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/flRuler"
+    android:orientation="vertical"
+    tools:context="com.wallace.tools.ui.RulerActivity">
+
+
+
+    <com.wallace.tools.view.Ruler2View
+        android:id="@+id/ruler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarRuler"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#11454545"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        app:title="直尺"
+        app:titleTextColor="#000000"
+        app:theme="@style/ToolbarTheme"/>
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/flProtractor"
+    tools:context="com.wallace.tools.ui.protractor.ProtractorActivity">
+
+    <com.wallace.tools.camera.CameraView
+        android:id="@+id/protractor_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        app:ckCropOutput="false"
+        app:ckFacing="back"
+        app:ckFlash="off"
+        app:ckFocus="tap"
+        app:ckJpegQuality="100"
+        app:ckMethod="standard"/>
+
+    <com.wallace.tools.view.ProtractorView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <com.wallace.tools.view.PTouchView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarProtractor"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+        app:title="量角器"
+        app:titleTextColor="#ffffff"
+        app:theme="@style/ToolbarThemeWhite"
+        />
+</FrameLayout>

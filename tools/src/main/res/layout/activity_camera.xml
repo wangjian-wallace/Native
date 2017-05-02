@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wallace.tools.ui.CameraActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarCamera"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:navigationIcon="@drawable/ic_arrow_back_white_24dp"
+        app:title="相机"
+        app:titleTextColor="@android:color/white"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.wallace.tools.camera.CameraView
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            app:ckCropOutput="false"
+            app:ckFacing="front"
+            app:ckFlash="off"
+            app:ckFocus="tap"
+            app:ckJpegQuality="100"
+            app:ckMethod="standard"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onFacing"
+            android:src="@drawable/ic_swap_h_black_24dp"
+            android:layout_margin="20dp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onFlash"
+            android:layout_marginTop="100dp"
+            android:text="Flash"/>
+    </FrameLayout>
+
+</LinearLayout>
