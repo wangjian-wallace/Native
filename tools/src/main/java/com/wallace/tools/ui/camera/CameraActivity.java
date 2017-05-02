@@ -1,4 +1,4 @@
-package com.wallace.tools.ui;
+package com.wallace.tools.ui.camera;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;

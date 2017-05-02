@@ -33,7 +33,7 @@
             android:name=".ui.RulerActivity"
             android:hardwareAccelerated="false" />
         <activity android:name=".ui.protractor.ProtractorActivity" />
-        <activity android:name=".ui.CameraActivity" />
+        <activity android:name=".ui.camera.CameraActivity" />
         <activity android:name=".ui.RandomActivity" />
         <activity
             android:name=".ui.music.MusicActivity"
@@ -55,7 +55,8 @@
 
         <activity android:name=".ui.example.ExampleActivity" />
         <activity android:name=".ui.transition.Transition1Activity" />
-        <activity android:name=".ui.transition.Transition2Activity"/>
+        <activity android:name=".ui.transition.Transition2Activity" />
+        <activity android:name=".ui.camera.Camera2Activity"></activity>
     </application>
 
 </manifest>
