@@ -9,6 +9,14 @@ MVP+retrofit+RxJava demo
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .build();
+     
+
+
+[**爬虫测试**](https://github.com/wjWite/Native/blob/master/tools/src/main/java/com/wallace/tools/ui/example/ExamplePresenter.java)
+
+获取数据
+
+     Document doc = Jsoup.connect("http://").get();
 
 ## License
 
