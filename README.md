@@ -1,6 +1,14 @@
 # Native
 工具
 
+MVP+retrofit+RxJava demo
+
+     private static Retrofit retrofit = new Retrofit.Builder()
+            .baseUrl("http://app.akmob.cn/api/")
+            .client(defaultOkHttpClient())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create())
+            .build();
 
 ## License
 
