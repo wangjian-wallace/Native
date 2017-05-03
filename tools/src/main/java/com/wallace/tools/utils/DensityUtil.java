@@ -2,9 +2,7 @@ package com.wallace.tools.utils;
 
 import android.content.Context;
 
-/**
- * Created by Administrator on 2016/3/24.
- */
+
 public class DensityUtil {
     /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)

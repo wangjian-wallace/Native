@@ -27,14 +27,6 @@ import java.util.List;
 
 import static com.wallace.tools.utils.ConvertUtils.byte2FitMemorySize;
 
-/**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/11
- *     desc  : 文件相关工具类
- * </pre>
- */
 public class FileUtils2 {
 
     /**

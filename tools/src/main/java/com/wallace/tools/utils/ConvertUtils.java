@@ -25,14 +25,7 @@ import static com.wallace.tools.utils.TimeConstants.MIN;
 import static com.wallace.tools.utils.TimeConstants.MSEC;
 import static com.wallace.tools.utils.TimeConstants.SEC;
 
-/**
- * <pre>
- *     author: Blankj
- *     blog  : http://blankj.com
- *     time  : 2016/8/13
- *     desc  : 转换相关工具类
- * </pre>
- */
+
 public class ConvertUtils {
 
     private ConvertUtils() {

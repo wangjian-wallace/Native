@@ -11,6 +11,7 @@ import com.wallace.tools.bean.MusicInfo;
 
 import java.util.ArrayList;
 
+@Deprecated
 public class MusicLoader {
       
     private static final String TAG = "MusicLoader";

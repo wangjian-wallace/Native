@@ -32,16 +32,6 @@ public class Ruler2View extends View{
     private PointF linePointer;
 
     private float guideScaleTextSize = 40;
-//    private float graduatedScaleBaseLength = 100;
-
-//    private float labelTextSize = 60;
-//    private boolean isMove = false;
-
-//    private OnRulerClickListener onRulerClickListener;
-//
-//    public void setOnRulerClickListener(OnRulerClickListener onRulerClickListener) {
-//        this.onRulerClickListener = onRulerClickListener;
-//    }
 
     public Ruler2View(Context context) {
         this(context,null);
@@ -92,14 +82,10 @@ public class Ruler2View extends View{
 
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:
-//                float x = event.getX();
                 float y = event.getY();
                 if (linePointer != null) {
                     float y1 = linePointer.y + 120;
                     float y2 = linePointer.y - 120;
-                    //                        if (onRulerClickListener != null){
-//                            onRulerClickListener.onClick();
-//                        }
                     return y > y2 && y < y1;
                 }
                 break;
@@ -108,33 +94,16 @@ public class Ruler2View extends View{
     }
 
 
-//    private boolean isTo = false;
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int pointerIndex = event.getActionIndex();
-//        int pointerId = event.getPointerId(pointerIndex);
 
         switch (event.getActionMasked()) {
             case MotionEvent.ACTION_DOWN:
             case MotionEvent.ACTION_POINTER_DOWN: {
-//                isMove = false;
-//                isTo = false;
-//                float x = event.getX();
-//                float y = event.getY();
-//                if (linePointer != null){
-//                    float y1 = linePointer.y + 70;
-//                    float y2 = linePointer.y - 70;
-//                    float x1 = linePointer.x + 70;
-//                    float x2 = linePointer.x - 70;
-//                    if (y > y2 && y < y1 && x > x2 && x < x1){
-//                        isTo = true;
-//                    }
-//                }
                 break;
             }
             case MotionEvent.ACTION_MOVE: {
-//                isMove = true;
-//                isTo = true;
                 if (linePointer!= null){
                     linePointer.set(event.getX(pointerIndex), event.getY(pointerIndex));
                 }
@@ -147,12 +116,6 @@ public class Ruler2View extends View{
                 if (linePointer!= null){
                     linePointer.set(event.getX(pointerIndex), event.getY(pointerIndex));
                 }
-//                isMove = false;
-//                if (!isTo){
-//                    if (onRulerClickListener != null){
-//                        onRulerClickListener.onClick();
-//                    }
-//                }
                 break;
             }
         }
@@ -216,9 +179,6 @@ public class Ruler2View extends View{
         }
         canvas.drawLine(0,paddingTop,width,paddingTop,linePaint);
 
-//        if (!isMove){
-//            linePointer.set(width/2,(height + paddingTop)/2);
-//        }
         canvas.drawLine(0,linePointer.y,width,linePointer.y,linePaint);
         String labelText = "";
         String labelIn = "";
@@ -243,10 +203,7 @@ public class Ruler2View extends View{
 
         canvas.save();
         canvas.translate(width/2,linePointer.y);
-//        Path path = new Path();
-//        path.addCircle(0,0,50, Path.Direction.CW);
         canvas.drawCircle(0,0,50,labelPaint);
-//        canvas.drawPath(path,labelPaint);
         canvas.drawLine(-16,0,16,0,mPaint);
         canvas.drawLine(-16,-15,16,-15,mPaint);
         canvas.drawLine(-16,15,16,15,mPaint);
@@ -287,9 +244,7 @@ public class Ruler2View extends View{
 
         setMeasuredDimension(width, height);
     }
-//    public interface OnRulerClickListener{
-//        void onClick();
-//    }
+
 
     private class Unit {
 
