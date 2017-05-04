@@ -4,16 +4,17 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class MusicInfo implements Parcelable {
-        private long id;  
-        private String title;  
-        private String album;  
-        private int duration;  
-        private long size;  
-        private String artist;        
-        private String url;       
-        private String displayName;
+    private long id;
+    private String title;
+    private String album;
+    private int duration;
+    private long size;
+    private String artist;
+    private String url;
+    private String displayName;
 
-    public MusicInfo(){}
+    public MusicInfo() {
+    }
 
     public MusicInfo(long id, String title) {
         this.id = id;

@@ -11,8 +11,8 @@ import com.wallace.tools.BaseActivity;
 import com.wallace.tools.R;
 import com.wallace.tools.adater.MainAdapter;
 import com.wallace.tools.bean.Main;
-import com.wallace.tools.ui.camera.Camera2Activity;
 import com.wallace.tools.ui.camera.CameraActivity;
+import com.wallace.tools.ui.camera.ImageActivity;
 import com.wallace.tools.ui.example.ExampleActivity;
 import com.wallace.tools.ui.music.MusicActivity;
 import com.wallace.tools.ui.transition.Transition1Activity;
@@ -74,7 +74,7 @@ public class MainActivity extends BaseActivity {
                         startActivity(intent);
                         break;
                     case 6:
-                        intent = new Intent(MainActivity.this, Camera2Activity.class);
+                        intent = new Intent(MainActivity.this, ImageActivity.class);
                         startActivity(intent);
                         break;
                 }
@@ -101,7 +101,7 @@ public class MainActivity extends BaseActivity {
         list.add(main);
 
         main = new Main();
-        main.setTitle("示例");
+        main.setTitle("音乐示例");
         main.setImage(R.drawable.ic_android_black_24dp);
         list.add(main);
         main = new Main();

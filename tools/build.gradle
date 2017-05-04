@@ -12,8 +12,43 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        ndk {
+//            moduleName "gpuimage-library"
+//            stl "gnustl_shared"
+//            abiFilters "all"
+//            ldLibs "log"
+        }
+        externalNativeBuild {
+            cmake {
+                cppFlags "-frtti -fexceptions"
+            }
+        }
     }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+    sourceSets {
+        main {
+//            manifest.srcFile 'AndroidManifest.xml'
+//            java.srcDirs = ['src']
+//            resources.srcDirs = ['src']
+//            aidl.srcDirs = ['src']
+//            renderscript.srcDirs = ['src']
+//            res.srcDirs = ['res']
+//            assets.srcDirs = ['assets']
+            jni.srcDirs = ['jni']
+        }
+
+        instrumentTest.setRoot('tests')
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
@@ -50,5 +85,6 @@ dependencies {
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
     compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
     compile 'org.jsoup:jsoup:1.10.2'
+//    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
     testCompile 'junit:junit:4.12'
 }

@@ -56,7 +56,8 @@
         <activity android:name=".ui.example.ExampleActivity" />
         <activity android:name=".ui.transition.Transition1Activity" />
         <activity android:name=".ui.transition.Transition2Activity" />
-        <activity android:name=".ui.camera.Camera2Activity"/>
+        <activity android:name=".ui.camera.Camera2Activity" />
+        <activity android:name=".ui.camera.ImageActivity"></activity>
     </application>
 
 </manifest>
