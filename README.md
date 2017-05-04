@@ -1,5 +1,8 @@
 # Native
-工具
+
+app里面包含ffmpeg测试
+<br/>
+demo主要东西都在 [工具](https://github.com/wjWite/Native/tree/master/tools) 里面
 
 MVP+retrofit+RxJava demo
 
