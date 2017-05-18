@@ -32,6 +32,7 @@
             android:layout_height="wrap_content"
             android:text="filter"/>
     </LinearLayout>
+
     <TextView
         android:id="@+id/sample_text"
         android:layout_width="wrap_content"

@@ -1,10 +1,13 @@
 package com.wallace;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.wallace.ui.VideoActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,27 +31,28 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv.setText(urlprotocolinfo());
+//                tv.setText(urlprotocolinfo());
+                startActivity(new Intent(MainActivity.this, VideoActivity.class));
             }
         });
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tv.setText(avformatinfo());
-            }
-        });
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tv.setText(avcodecinfo());
-            }
-        });
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tv.setText(avfilterinfo());
-            }
-        });
+//        button2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                tv.setText(avformatinfo());
+//            }
+//        });
+//        button3.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                tv.setText(avcodecinfo());
+//            }
+//        });
+//        button4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                tv.setText(avfilterinfo());
+//            }
+//        });
     }
 
     /**
@@ -56,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI();
-    public native String urlprotocolinfo();
-    public native String avformatinfo();
-    public native String avcodecinfo();
-    public native String avfilterinfo();
+//    public native String urlprotocolinfo();
+//    public native String avformatinfo();
+//    public native String avcodecinfo();
+//    public native String avfilterinfo();
 }

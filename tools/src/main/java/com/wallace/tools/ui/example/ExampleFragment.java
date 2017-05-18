@@ -30,7 +30,7 @@ public class ExampleFragment extends Fragment implements ExampleContract.Example
 //    private TextView textView;
 //    private RxPermissions rxPermissions;
 
-    private String TAG = "ExampleFragment";
+    private static final String TAG = "ExampleFragment";
 
     public static ExampleFragment newInstance(){
         return new ExampleFragment();

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.wallace"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -16,7 +16,7 @@ android {
             }
         }
         ndk {
-            abiFilters  "armeabi-v7a"
+//            abiFilters "armeabi-v7a"
         }
 
     }
@@ -37,13 +37,34 @@ android {
         }
     }
 }
-
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:preference-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+//    compile project(':ijkplayer-java')
+//    compile project(':ijkplayer-exo')
+//
+//    compile project(':ijkplayer-armv5')
+//    compile project(':ijkplayer-armv7a')
+//    compile project(':ijkplayer-arm64')
+//    compile project(':ijkplayer-x86')
+//    compile project(':ijkplayer-x86_64')
+
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.7.9'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.7.9'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.7.9'
+    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.7.9'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.7.9'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.7.9'
+    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.7.9'
     testCompile 'junit:junit:4.12'
 }

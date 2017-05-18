@@ -81,7 +81,7 @@ public class ImageProcessHelper {
      * @param roundPx    float 
      * @return Bitmap 
      */  
-    public Bitmap convert2RoundedCorner(Bitmap mBitmapSrc, float roundPx) {  
+    public Bitmap convert2RoundedCorner(Bitmap mBitmapSrc, float roundPx) {
         Bitmap newBitmap = Bitmap.createBitmap(mBitmapSrc.getWidth(), mBitmapSrc.getHeight(),
                 Bitmap.Config.ARGB_8888);  
         // 得到画布  
@@ -219,11 +219,14 @@ public class ImageProcessHelper {
      */  
     public Bitmap convertToBlur(Bitmap mBitmapSrc) {  
         // 高斯矩阵  
-        int[] gauss = new int[]{1, 2, 1, 2, 4, 2, 1, 2, 1};  
+        int[] gauss = new int[]{
+                1, 2, 1,
+                2, 4, 2,
+                1, 2, 1};
         int width = mBitmapSrc.getWidth();  
         int height = mBitmapSrc.getHeight();  
-        Bitmap newBmp = Bitmap.createBitmap(width, height,  
-                Bitmap.Config.RGB_565);  
+//        Bitmap newBmp = Bitmap.createBitmap(width, height,
+//                Bitmap.Config.RGB_565);
         int pixR = 0;  
         int pixG = 0;  
         int pixB = 0;  

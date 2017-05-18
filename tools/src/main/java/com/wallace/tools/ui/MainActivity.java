@@ -80,7 +80,10 @@ public class MainActivity extends BaseActivity {
                 }
             }
         });
+
+
     }
+
     private void getData(){
         list = new ArrayList<>();
         Main main = new Main();
