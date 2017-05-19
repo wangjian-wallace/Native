@@ -79,6 +79,7 @@ public class AndroidMediaController extends MediaController implements IMediaCon
     //----------
     private ArrayList<View> mShowOnceArray = new ArrayList<View>();
 
+    @Override
     public void showOnce(@NonNull View view) {
         mShowOnceArray.add(view);
         view.setVisibility(View.VISIBLE);

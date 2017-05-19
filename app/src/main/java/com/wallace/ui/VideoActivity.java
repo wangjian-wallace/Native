@@ -11,6 +11,7 @@ import com.wallace.Settings;
 import com.wallace.widget.media.AndroidMediaController;
 import com.wallace.widget.media.IjkVideoView;
 
+import tv.danmaku.ijk.media.player.IMediaPlayer;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
 public class VideoActivity extends AppCompatActivity {
@@ -42,15 +43,15 @@ public class VideoActivity extends AppCompatActivity {
         mVideoView.setMediaController(mMediaController);
         mVideoView.setHudView(mHudView);
 
-        mVideoView.setVideoPath("http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8");
+        mVideoView.setVideoPath("http://cdn-fms.rbs.com.br/vod/hls_sample1_manifest.m3u8");
 
-//        mVideoView.setOnPreparedListener(new IMediaPlayer.OnPreparedListener() {
-//            @Override
-//            public void onPrepared(IMediaPlayer mp) {
-//                mVideoView.start();
-//            }
-//        });
-        mVideoView.start();
+        mVideoView.setOnPreparedListener(new IMediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(IMediaPlayer mp) {
+                mVideoView.start();
+            }
+        });
+//        mVideoView.start();
     }
     @Override
     public void onBackPressed() {

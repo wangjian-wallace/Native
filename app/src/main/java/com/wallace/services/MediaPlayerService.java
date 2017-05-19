@@ -30,8 +30,7 @@ public class MediaPlayerService extends Service {
     private static IMediaPlayer sMediaPlayer;
 
     public static Intent newIntent(Context context) {
-        Intent intent = new Intent(context, MediaPlayerService.class);
-        return intent;
+        return new Intent(context, MediaPlayerService.class);
     }
 
     public static void intentToStart(Context context) {
