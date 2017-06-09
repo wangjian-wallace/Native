@@ -16,6 +16,7 @@ import com.wallace.tools.ui.camera.ImageActivity;
 import com.wallace.tools.ui.example.ExampleActivity;
 import com.wallace.tools.ui.music.MusicActivity;
 import com.wallace.tools.ui.transition.Transition1Activity;
+import com.wallace.tools.ui.video.VideoActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +51,7 @@ public class MainActivity extends BaseActivity {
             public void onClick(View view, int position) {
                 switch (position){
                     case 0:
-                        intent = new Intent(MainActivity.this, FlashlightActivity.class);
+                        intent = new Intent(MainActivity.this, VideoActivity.class);
                         startActivity(intent);
                         break;
                     case 1:

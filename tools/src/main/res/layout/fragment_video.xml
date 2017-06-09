@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wallace.tools.ui.video.VideoActivity">
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+            <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="240dp">-->
+                <!--&lt;!&ndash;<com.google.android.exoplayer2.ui.SimpleExoPlayerView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/player_view"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="240dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/ivVideo_play"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="60dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="60dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_gravity="center_horizontal"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:src="@drawable/ic_play_arrow_black_24dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginTop="100dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:contentDescription="@null" />&ndash;&gt;-->
+            <!--</FrameLayout>-->
+            <!---->
+        <!--</LinearLayout>-->
+    <!--</android.support.v4.widget.NestedScrollView>-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/video_full_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>
