@@ -13,6 +13,7 @@ import com.wallace.tools.adater.MainAdapter;
 import com.wallace.tools.bean.Main;
 import com.wallace.tools.ui.camera.CameraActivity;
 import com.wallace.tools.ui.camera.ImageActivity;
+import com.wallace.tools.ui.card.CardActivity;
 import com.wallace.tools.ui.example.ExampleActivity;
 import com.wallace.tools.ui.music.MusicActivity;
 import com.wallace.tools.ui.transition.Transition1Activity;
@@ -78,6 +79,10 @@ public class MainActivity extends BaseActivity {
                         intent = new Intent(MainActivity.this, ImageActivity.class);
                         startActivity(intent);
                         break;
+                    case 7:
+                        intent = new Intent(MainActivity.this, CardActivity.class);
+                        startActivity(intent);
+                        break;
                 }
             }
         });
@@ -114,6 +119,10 @@ public class MainActivity extends BaseActivity {
         list.add(main);
         main = new Main();
         main.setTitle("example2");
+        main.setImage(R.drawable.ic_android_black_24dp);
+        list.add(main);
+        main = new Main();
+        main.setTitle("card");
         main.setImage(R.drawable.ic_android_black_24dp);
         list.add(main);
     }
