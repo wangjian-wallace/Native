@@ -38,22 +38,6 @@ class ExamplePresenter implements ExampleContract.Presenter {
         compositeDisposable = new CompositeDisposable();
     }
 
-//    private static Retrofit retrofit = new Retrofit.Builder()
-//            .baseUrl("http://app.akmob.cn/api/")
-//            .client(defaultOkHttpClient())
-//            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-//            .addConverterFactory(GsonConverterFactory.create())
-//            .build();
-//
-//    private static OkHttpClient defaultOkHttpClient() {
-//        return new OkHttpClient.Builder()
-//                .connectTimeout(3, TimeUnit.SECONDS)
-//                .writeTimeout(3, TimeUnit.SECONDS)
-//                .readTimeout(3, TimeUnit.SECONDS)
-//                .build();
-//    }
-
-
     @Override
     public void getData() {
 
@@ -104,9 +88,17 @@ class ExamplePresenter implements ExampleContract.Presenter {
         compositeDisposable.clear();
     }
 
+
+    /**
+     * 糗事百科爬虫测试数据
+     * @param tab 分类
+     * @param num 分页
+     * @return 展示数据
+     * @throws IOException IOException
+     */
     private ArrayList<HashMap<String,String>> getElements(String tab,String num) throws IOException{
         Document doc = Jsoup.connect("http://www.qiushibaike.com/"+ tab +"/page/" + num).get();
-        Elements singerListDiv = doc.getElementsByClass("article block untagged mb15");
+        Elements singerListDiv = doc.getElementsByClass("article block untagged mb15 typs_hot");
 
         ArrayList<HashMap<String,String>> list = new ArrayList<>();
         for (Element link: singerListDiv) {
@@ -157,6 +149,12 @@ class ExamplePresenter implements ExampleContract.Presenter {
             }
             list.add(map);
         }
+        return list;
+    }
+
+    private ArrayList<HashMap<String,String>> getElements2(String tab,String num){
+        ArrayList<HashMap<String,String>> list = new ArrayList<>();
+
         return list;
     }
 }

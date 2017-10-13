@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
-import com.shuyu.gsyvideoplayer.GSYVideoPlayer;
 import com.shuyu.gsyvideoplayer.utils.CommonUtil;
 import com.shuyu.gsyvideoplayer.utils.Debuger;
 import com.shuyu.gsyvideoplayer.utils.ListVideoUtil;
@@ -160,7 +159,6 @@ public class VideoFragment extends Fragment implements VideoContract.VideoView {
     public void onDestroy() {
         super.onDestroy();
         listVideoUtil.releaseVideoPlayer();
-        GSYVideoPlayer.releaseAllVideos();
     }
 
 }
