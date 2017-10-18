@@ -45,10 +45,12 @@ class ExamplePresenter implements ExampleContract.Presenter {
                 .create(new ObservableOnSubscribe<ArrayList<HashMap<String,String>>>() {
                     @Override
                     public void subscribe(ObservableEmitter<ArrayList<HashMap<String,String>>> e) throws Exception {
-                        e.onNext(getElements("8hr","1"));
-                        e.onNext(getElements("8hr","2"));
-                        e.onNext(getElements("imgrank","1"));
-                        e.onNext(getElements("imgrank","2"));
+//                        e.onNext(getElements("8hr","1"));
+//                        e.onNext(getElements("8hr","2"));
+//                        e.onNext(getElements("imgrank","1"));
+//                        e.onNext(getElements("imgrank","2"));
+                        e.onNext(getElements());
+//                        e.onNext(getElements());
                         e.onComplete();
                     }
                 })
@@ -152,9 +154,58 @@ class ExamplePresenter implements ExampleContract.Presenter {
         return list;
     }
 
-    private ArrayList<HashMap<String,String>> getElements2(String tab,String num){
+    private ArrayList<HashMap<String,String>> getElements() throws IOException{
         ArrayList<HashMap<String,String>> list = new ArrayList<>();
+        Document doc = Jsoup.connect("http://www.budejie.com/").get();
+        Elements userListDiv = doc.getElementsByClass("j-list-user");
+        Elements contentListDiv = doc.getElementsByClass("j-r-list-c");
 
+        int i = 0;
+        for (Element link : userListDiv){
+            HashMap<String,String> map = new HashMap<>();
+            Elements author = link.getElementsByClass("u-img");
+            for (Element el : author){
+                Elements elements = el.getElementsByTag("img");
+                Elements elements2 = el.getElementsByTag("span");
+                map.put("time",elements2.text());
+                for(Element element : elements) {
+                    String imgSrc = element.attr("data-original"); //获取src属性的值
+                    String name = element.attr("alt"); //获取src属性的值
+                    map.put("author",imgSrc);
+                    map.put("name",name);
+                }
+            }
+            if (contentListDiv.get(i) != null){
+                Elements content = contentListDiv.get(i).getElementsByClass("j-r-list-c-desc");
+                Elements image = contentListDiv.get(i).getElementsByClass("j-r-list-c-img");
+                Elements video = contentListDiv.get(i).getElementsByClass("j-video-c");
+                map.put("text",content.text());
+                if (!image.isEmpty()){
+                    for (Element el : image){
+                        Elements elements=el.getElementsByTag("img");
+                        for(Element element : elements) {
+                            String imgSrc = element.attr("data-original"); //获取src属性的值
+                            map.put("image",imgSrc);
+                        }
+                    }
+
+                }else {
+                    map.put("image","false");
+                }
+                if (!video.isEmpty()){
+                    for (Element el : video){
+                        Elements elements=el.getElementsByClass("j-video");
+                        map.put("videoImage",elements.attr("data-poster"));
+                        map.put("video",elements.attr("data-mp4"));
+                    }
+                }else {
+                    map.put("video","false");
+                }
+            }
+
+            list.add(map);
+            i++;
+        }
         return list;
     }
 }

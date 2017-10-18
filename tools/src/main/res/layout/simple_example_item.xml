@@ -44,9 +44,16 @@
     <ImageView
         android:id="@+id/ivSimple_icon"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:visibility="gone"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"
         android:layout_marginTop="5dp"/>
+    <com.wallace.tools.ui.video.SampleCoverVideo
+        android:id="@+id/vSimple_video"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:visibility="gone"/>
     <TextView
         android:id="@+id/tvSimple_comments"
         android:layout_width="wrap_content"
