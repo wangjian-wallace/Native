@@ -154,6 +154,11 @@ class ExamplePresenter implements ExampleContract.Presenter {
         return list;
     }
 
+    /**
+     * 百思不得姐
+     * @return 数据
+     * @throws IOException 抛出
+     */
     private ArrayList<HashMap<String,String>> getElements() throws IOException{
         ArrayList<HashMap<String,String>> list = new ArrayList<>();
         Document doc = Jsoup.connect("http://www.budejie.com/").get();

@@ -87,4 +87,11 @@
             <enum name="mirror" value="2" />
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="MySeekBar2">
+        <attr name="seekSmallText" format="integer"/>
+        <attr name="seekBigText" format="integer"/>
+        <attr name="seekMove" format="integer"/>
+        <attr name="seekInterval" format="integer"/>
+    </declare-styleable>
 </resources>
