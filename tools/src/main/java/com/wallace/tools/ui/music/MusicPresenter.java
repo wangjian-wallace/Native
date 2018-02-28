@@ -67,39 +67,42 @@ class MusicPresenter implements MusicContract.Presenter {
                 }
             };
 
-            Collections.sort(files,comparator);
-            MediaMetadataRetriever metadataRetriever = new MediaMetadataRetriever();
+            if (files != null) {
+                Collections.sort(files,comparator);
+                MediaMetadataRetriever metadataRetriever = new MediaMetadataRetriever();
 
-            try {
-                for (File file : files){
-                    if (isMusic(file)){
-                        Log.d("File", "run: " + file.getAbsolutePath());
-                        MusicInfo m = fileToMusic(metadataRetriever,file);
-                        if (m.getSize() > 300000)list.add(m);
-                    }
-
-                }
-                if (files2 != null && files2.size() > 0){
-
-                    Collections.sort(files2,comparator);
-                    for (File file : files2){
-                        if(isMusic(file)){
+                try {
+                    for (File file : files){
+                        if (isMusic(file)){
+                            Log.d("File", "run: " + file.getAbsolutePath());
                             MusicInfo m = fileToMusic(metadataRetriever,file);
                             if (m.getSize() > 300000)list.add(m);
-
                         }
 
                     }
-                }
-            }catch (RuntimeException r){
-                r.printStackTrace();
-            }finally {
-                try {
-                    metadataRetriever.release();
+                    if (files2 != null && files2.size() > 0){
+
+                        Collections.sort(files2,comparator);
+                        for (File file : files2){
+                            if(isMusic(file)){
+                                MusicInfo m = fileToMusic(metadataRetriever,file);
+                                if (m.getSize() > 300000)list.add(m);
+
+                            }
+
+                        }
+                    }
                 }catch (RuntimeException r){
                     r.printStackTrace();
+                }finally {
+                    try {
+                        metadataRetriever.release();
+                    }catch (RuntimeException r){
+                        r.printStackTrace();
+                    }
                 }
             }
+
 
 
 

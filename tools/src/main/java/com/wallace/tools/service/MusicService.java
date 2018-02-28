@@ -1,5 +1,6 @@
 package com.wallace.tools.service;
 
+import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -229,6 +230,7 @@ public class MusicService extends Service{
             sendBroadcast(intent);
         }
     }
+    @SuppressLint("WrongConstant")
     private void showNotification() {
         Intent intent = new Intent(this,MusicActivity.class);
         intent.putExtra("index",index);
@@ -301,6 +303,7 @@ public class MusicService extends Service{
         return musicProvider.isPlay();
     }
 
+    @SuppressLint("WrongConstant")
     private PendingIntent getPendingIntent(String action) {
         Intent i = new Intent(action);
         i.setFlags(NOTIFICATION_FLAG);

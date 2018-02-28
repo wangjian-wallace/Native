@@ -60,7 +60,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".ui.transition.Transition1Activity" />
         <activity android:name=".ui.transition.Transition2Activity" />
-        <activity android:name=".ui.camera.Camera2Activity" />
+        <activity android:name=".ui.camera.Camera2Activity"
+            android:theme="@style/MaterialTheme"/>
         <activity android:name=".ui.camera.ImageActivity" />
         <activity
             android:name=".ui.video.VideoActivity"

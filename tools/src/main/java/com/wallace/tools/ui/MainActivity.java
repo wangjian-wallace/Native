@@ -11,7 +11,7 @@ import com.wallace.tools.BaseActivity;
 import com.wallace.tools.R;
 import com.wallace.tools.adater.MainAdapter;
 import com.wallace.tools.bean.Main;
-import com.wallace.tools.ui.camera.CameraActivity;
+import com.wallace.tools.ui.camera.Camera2Activity;
 import com.wallace.tools.ui.camera.ImageActivity;
 import com.wallace.tools.ui.card.CardActivity;
 import com.wallace.tools.ui.example.ExampleActivity;
@@ -64,7 +64,7 @@ public class MainActivity extends BaseActivity {
                         startActivity(intent);
                         break;
                     case 3:
-                        intent = new Intent(MainActivity.this, CameraActivity.class);
+                        intent = new Intent(MainActivity.this, Camera2Activity.class);
                         startActivity(intent);
                         break;
                     case 4:

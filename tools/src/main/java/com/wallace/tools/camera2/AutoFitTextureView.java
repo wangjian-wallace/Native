@@ -2,8 +2,12 @@ package com.wallace.tools.camera2;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.TextureView;
 
+/**
+ * A {@link TextureView} that can be adjusted to a specified aspect ratio.
+ */
 public class AutoFitTextureView extends TextureView {
 
     private int mRatioWidth = 0;
@@ -43,10 +47,10 @@ public class AutoFitTextureView extends TextureView {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int width = MeasureSpec.getSize(widthMeasureSpec);
         int height = MeasureSpec.getSize(heightMeasureSpec);
+        Log.d("AutoFitView", "onMeasure: " + width + " : " + height);
 //        if (0 == mRatioWidth || 0 == mRatioHeight) {
             setMeasuredDimension(width, height);
-//        }
-//        else {
+//        } else {
 //            if (width < height * mRatioWidth / mRatioHeight) {
 //                setMeasuredDimension(width, width * mRatioHeight / mRatioWidth);
 //            } else {
