@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.wallace"
         minSdkVersion 21
-        targetSdkVersion 25
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -43,13 +43,13 @@ allprojects {
     }
 }
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:preference-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:preference-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
 //    compile project(':ijkplayer-java')
 //    compile project(':ijkplayer-exo')
 //
@@ -59,12 +59,12 @@ dependencies {
 //    compile project(':ijkplayer-x86')
 //    compile project(':ijkplayer-x86_64')
 
-    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.7.9'
-    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.7.9'
-    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.7.9'
-    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.7.9'
-    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.7.9'
-    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.7.9'
-    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.7.9'
-    testCompile 'junit:junit:4.12'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.4'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.7.9'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv5:0.7.9'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-arm64:0.7.9'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-x86:0.7.9'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.7.9'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.4'
+    testImplementation 'junit:junit:4.12'
 }

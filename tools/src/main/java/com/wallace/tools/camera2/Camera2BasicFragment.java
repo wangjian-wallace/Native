@@ -385,6 +385,7 @@ public class Camera2BasicFragment extends Fragment
 //        Log.d(TAG, "chooseOptimalSize: " + choices[0].toString());
 //        Log.d(TAG, "chooseOptimalSize: " + choices.length);
         for (Size option : choices) {
+            Log.d(TAG, "chooseOptimalSize: " + option.toString());
             if (option.getWidth() <= maxWidth && option.getHeight() <= maxHeight &&
                     option.getHeight() == option.getWidth() * h / w) {
                 if (option.getWidth() >= textureViewWidth &&
@@ -563,8 +564,8 @@ public class Camera2BasicFragment extends Fragment
 //                mPreviewSize = chooseOptimalSize(map.getOutputSizes(SurfaceTexture.class),
 //                        rotatedPreviewWidth, rotatedPreviewHeight, maxPreviewWidth,
 //                        maxPreviewHeight, largest);
-                mPreviewSize = new Size(width,height);
-                Log.d(TAG, "setUpCameraOutputs: " + mPreviewSize.toString());
+                mPreviewSize = new Size(height,width);
+//                Log.d(TAG, "setUpCameraOutputs: " + mPreviewSize.toString());
 
                 // We fit the aspect ratio of TextureView to the size of preview we picked.
                 int orientation = getResources().getConfiguration().orientation;

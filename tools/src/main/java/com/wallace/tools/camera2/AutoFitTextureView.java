@@ -48,15 +48,16 @@ public class AutoFitTextureView extends TextureView {
         int width = MeasureSpec.getSize(widthMeasureSpec);
         int height = MeasureSpec.getSize(heightMeasureSpec);
         Log.d("AutoFitView", "onMeasure: " + width + " : " + height);
-//        if (0 == mRatioWidth || 0 == mRatioHeight) {
+        Log.d("AutoFitView", "onMeasure: " + mRatioWidth + " : " + mRatioHeight);
+        if (0 == mRatioWidth || 0 == mRatioHeight) {
             setMeasuredDimension(width, height);
-//        } else {
-//            if (width < height * mRatioWidth / mRatioHeight) {
-//                setMeasuredDimension(width, width * mRatioHeight / mRatioWidth);
-//            } else {
-//                setMeasuredDimension(height * mRatioWidth / mRatioHeight, height);
-//            }
-//        }
+        } else {
+            if (width < height * mRatioWidth / mRatioHeight) {
+                setMeasuredDimension(width, width * mRatioHeight / mRatioWidth);
+            } else {
+                setMeasuredDimension(height * mRatioWidth / mRatioHeight, height);
+            }
+        }
     }
 
 }
