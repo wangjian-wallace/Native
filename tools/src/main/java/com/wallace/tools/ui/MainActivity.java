@@ -111,11 +111,11 @@ public class MainActivity extends BaseActivity {
 
         main = new Main();
         main.setTitle("音乐示例");
-        main.setImage(R.drawable.ic_android_black_24dp);
+        main.setImage(R.drawable.ic_music_note_black_24dp);
         list.add(main);
         main = new Main();
         main.setTitle("example");
-        main.setImage(R.drawable.ic_android_black_24dp);
+        main.setImage(R.drawable.ic_description_black_24dp);
         list.add(main);
         main = new Main();
         main.setTitle("example2");
@@ -123,7 +123,7 @@ public class MainActivity extends BaseActivity {
         list.add(main);
         main = new Main();
         main.setTitle("card");
-        main.setImage(R.drawable.ic_android_black_24dp);
+        main.setImage(R.drawable.ic_credit_card_black_24dp);
         list.add(main);
     }
 
